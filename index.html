@@ -69,6 +69,66 @@
             overflow-x: hidden;
         }
 
+        /* CREDIBILITY BAR - Trust Signals */
+        .credibility-bar {
+            position: fixed;
+            top: 80px; /* Below header */
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, #0052CC 0%, #00D4AA 100%);
+            z-index: 999;
+            padding: 0.75rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .credibility-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .credibility-badges {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .badge-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: white;
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .badge-item:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+        }
+
+        .badge-item i {
+            font-size: 1.2rem;
+        }
+
+        .badge-stripe {
+            background: rgba(255, 255, 255, 0.25);
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            font-weight: 600;
+        }
+
+        .badge-stripe:hover {
+            background: rgba(255, 255, 255, 0.35);
+            border-color: rgba(255, 255, 255, 0.7);
+        }
+
         /* Header */
         .header {
             position: fixed;
@@ -169,7 +229,7 @@
 
         /* Hero Section */
         .hero {
-            padding: 8rem 0 4rem;
+            padding: 10rem 0 4rem; /* Extra padding for credibility bar */
             background: var(--bg-light);
             position: relative;
             overflow: hidden;
@@ -332,9 +392,24 @@
             margin-bottom: 0.5rem;
         }
 
+        .stat-number i {
+            font-size: 2.5rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
         .stat-label {
             color: var(--text-medium);
-            font-weight: 500;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .stat-detail {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            font-weight: 400;
         }
 
         /* Services Section */
@@ -664,12 +739,30 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
+            .credibility-bar {
+                padding: 0.5rem 0;
+            }
+
+            .credibility-badges {
+                gap: 1rem;
+                font-size: 0.8rem;
+            }
+
+            .badge-item {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.75rem;
+            }
+
+            .badge-item i {
+                font-size: 1rem;
+            }
+
             .nav-menu {
                 display: none;
             }
 
             .hero {
-                padding: 6rem 0 3rem;
+                padding: 8rem 0 3rem; /* Adjusted for mobile */
             }
 
             .hero-buttons {
@@ -745,6 +838,34 @@
         </nav>
     </header>
 
+    <!-- CREDIBILITY BAR - Trust Signals First! -->
+    <section class="credibility-bar">
+        <div class="credibility-container">
+            <div class="credibility-badges">
+                <div class="badge-item badge-stripe">
+                    <i class="fab fa-stripe"></i>
+                    <span>Stripe Approved Partner</span>
+                </div>
+                <div class="badge-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>PCI-DSS Level 1</span>
+                </div>
+                <div class="badge-item">
+                    <i class="fab fa-microsoft"></i>
+                    <span>Microsoft Partner</span>
+                </div>
+                <div class="badge-item">
+                    <i class="fas fa-globe-americas"></i>
+                    <span>45+ Countries</span>
+                </div>
+                <div class="badge-item">
+                    <i class="fas fa-lock"></i>
+                    <span>SOC 2 Compliant</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-container">
@@ -779,19 +900,28 @@
         <div class="stats-container">
             <div class="stats-grid scroll-animate">
                 <div class="stat-item">
-                    <div class="stat-number">500+</div>
-                    <div class="stat-label">Projects Delivered</div>
+                    <div class="stat-number"><i class="fab fa-stripe"></i></div>
+                    <div class="stat-label">Stripe Approved Partner</div>
+                    <div class="stat-detail">Full Platform Access</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">99.9%</div>
-                    <div class="stat-label">Uptime Guarantee</div>
+                    <div class="stat-number">99.99%</div>
+                    <div class="stat-label">Platform Uptime</div>
+                    <div class="stat-detail">Powered by Stripe</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">50+</div>
-                    <div class="stat-label">Enterprise Clients</div>
+                    <div class="stat-number">45+</div>
+                    <div class="stat-label">Countries Supported</div>
+                    <div class="stat-detail">135+ Currencies</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">24/7</div>
+                    <div class="stat-number"><i class="fas fa-shield-alt"></i></div>
+                    <div class="stat-label">PCI-DSS Level 1</div>
+                    <div class="stat-detail">SOC 2 Compliant</div>
+                </div>
+            </div>
+        </div>
+    </section>
                     <div class="stat-label">Expert Support</div>
                 </div>
             </div>
