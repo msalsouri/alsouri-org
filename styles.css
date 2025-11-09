@@ -107,6 +107,18 @@ body {
     border-color: rgba(255, 255, 255, 0.7);
 }
 
+.badge-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.badge-link:hover .badge-item {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
 /* ========================================
    HEADER & NAVIGATION
    ======================================== */
