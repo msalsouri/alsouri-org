@@ -443,6 +443,12 @@
             margin-top: 3rem;
         }
 
+        .tech-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
         .tech-item {
             text-align: center;
             padding: 1.5rem;
@@ -450,6 +456,7 @@
             background: var(--bg-light);
             border: 1px solid var(--border-light);
             transition: all 0.3s ease;
+            cursor: pointer;
         }
 
         .tech-item:hover {
@@ -576,11 +583,41 @@
             color: var(--secondary);
         }
 
+        .company-details {
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.85rem;
+            line-height: 1.6;
+            color: var(--text-lighter);
+        }
+
+        .company-details p {
+            margin: 0.3rem 0;
+        }
+
+        .company-details strong {
+            color: var(--secondary);
+            font-weight: 600;
+        }
+
         .footer-bottom {
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             padding-top: 2rem;
             text-align: center;
             color: var(--text-lighter);
+        }
+
+        .footer-link {
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: #4A9EFF;
+            text-decoration: underline;
         }
 
         .social-links {
@@ -857,78 +894,174 @@
                 </p>
             </div>
             <div class="tech-grid">
-                <div class="tech-item scroll-animate">
-                    <div class="tech-icon">
-                        <i class="fab fa-aws"></i>
+                <a href="https://aws.amazon.com" target="_blank" rel="noopener noreferrer" class="tech-link">
+                    <div class="tech-item scroll-animate">
+                        <div class="tech-icon">
+                            <i class="fab fa-aws"></i>
+                        </div>
+                        <div class="tech-name">AWS</div>
                     </div>
-                    <div class="tech-name">AWS</div>
-                </div>
-                <div class="tech-item scroll-animate">
-                    <div class="tech-icon">
-                        <i class="fab fa-microsoft"></i>
+                </a>
+                <a href="https://azure.microsoft.com" target="_blank" rel="noopener noreferrer" class="tech-link">
+                    <div class="tech-item scroll-animate">
+                        <div class="tech-icon">
+                            <i class="fab fa-microsoft"></i>
+                        </div>
+                        <div class="tech-name">Azure</div>
                     </div>
-                    <div class="tech-name">Azure</div>
-                </div>
-                <div class="tech-item scroll-animate">
-                    <div class="tech-icon">
-                        <i class="fab fa-google"></i>
+                </a>
+                <a href="https://cloud.google.com" target="_blank" rel="noopener noreferrer" class="tech-link">
+                    <div class="tech-item scroll-animate">
+                        <div class="tech-icon">
+                            <i class="fab fa-google"></i>
+                        </div>
+                        <div class="tech-name">Google Cloud</div>
                     </div>
-                    <div class="tech-name">Google Cloud</div>
-                </div>
-                <div class="tech-item scroll-animate">
-                    <div class="tech-icon">
-                        <i class="fab fa-python"></i>
+                </a>
+                <a href="https://www.python.org" target="_blank" rel="noopener noreferrer" class="tech-link">
+                    <div class="tech-item scroll-animate">
+                        <div class="tech-icon">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <div class="tech-name">Python</div>
                     </div>
-                    <div class="tech-name">Python</div>
-                </div>
-                <div class="tech-item scroll-animate">
-                    <div class="tech-icon">
-                        <i class="fab fa-js-square"></i>
+                </a>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer" class="tech-link">
+                    <div class="tech-item scroll-animate">
+                        <div class="tech-icon">
+                            <i class="fab fa-js-square"></i>
+                        </div>
+                        <div class="tech-name">JavaScript</div>
                     </div>
-                    <div class="tech-name">JavaScript</div>
-                </div>
-                <div class="tech-item scroll-animate">
-                    <div class="tech-icon">
-                        <i class="fab fa-react"></i>
+                </a>
+                <a href="https://react.dev" target="_blank" rel="noopener noreferrer" class="tech-link">
+                    <div class="tech-item scroll-animate">
+                        <div class="tech-icon">
+                            <i class="fab fa-react"></i>
+                        </div>
+                        <div class="tech-name">React</div>
                     </div>
-                    <div class="tech-name">React</div>
-                </div>
-                <div class="tech-item scroll-animate">
-                    <div class="tech-icon">
-                        <i class="fab fa-docker"></i>
+                </a>
+                <a href="https://www.docker.com" target="_blank" rel="noopener noreferrer" class="tech-link">
+                    <div class="tech-item scroll-animate">
+                        <div class="tech-icon">
+                            <i class="fab fa-docker"></i>
+                        </div>
+                        <div class="tech-name">Docker</div>
                     </div>
-                    <div class="tech-name">Docker</div>
-                </div>
-                <div class="tech-item scroll-animate">
-                    <div class="tech-icon">
-                        <i class="fas fa-dharmachakra"></i>
+                </a>
+                <a href="https://kubernetes.io" target="_blank" rel="noopener noreferrer" class="tech-link">
+                    <div class="tech-item scroll-animate">
+                        <div class="tech-icon">
+                            <i class="fas fa-dharmachakra"></i>
+                        </div>
+                        <div class="tech-name">Kubernetes</div>
                     </div>
-                    <div class="tech-name">Kubernetes</div>
-                </div>
-                <div class="tech-item scroll-animate">
-                    <div class="tech-icon">
-                        <i class="fas fa-brain"></i>
+                </a>
+                <a href="https://www.tensorflow.org" target="_blank" rel="noopener noreferrer" class="tech-link">
+                    <div class="tech-item scroll-animate">
+                        <div class="tech-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="tech-name">TensorFlow</div>
                     </div>
-                    <div class="tech-name">TensorFlow</div>
-                </div>
-                <div class="tech-item scroll-animate">
-                    <div class="tech-icon">
-                        <i class="fas fa-database"></i>
+                </a>
+                <a href="https://www.mongodb.com" target="_blank" rel="noopener noreferrer" class="tech-link">
+                    <div class="tech-item scroll-animate">
+                        <div class="tech-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="tech-name">MongoDB</div>
                     </div>
-                    <div class="tech-name">MongoDB</div>
-                </div>
-                <div class="tech-item scroll-animate">
-                    <div class="tech-icon">
-                        <i class="fas fa-server"></i>
+                </a>
+                <a href="https://www.postgresql.org" target="_blank" rel="noopener noreferrer" class="tech-link">
+                    <div class="tech-item scroll-animate">
+                        <div class="tech-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <div class="tech-name">PostgreSQL</div>
                     </div>
-                    <div class="tech-name">PostgreSQL</div>
-                </div>
-                <div class="tech-item scroll-animate">
-                    <div class="tech-icon">
-                        <i class="fab fa-git-alt"></i>
+                </a>
+                <a href="https://git-scm.com" target="_blank" rel="noopener noreferrer" class="tech-link">
+                    <div class="tech-item scroll-animate">
+                        <div class="tech-icon">
+                            <i class="fab fa-git-alt"></i>
+                        </div>
+                        <div class="tech-name">Git</div>
                     </div>
-                    <div class="tech-name">Git</div>
-                </div>
+                </a>
+                <a href="https://www.oracle.com/cloud/" target="_blank" rel="noopener noreferrer" class="tech-link">
+                    <div class="tech-item scroll-animate">
+                        <div class="tech-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="tech-name">Oracle</div>
+                    </div>
+                </a>
+                <a href="https://www.microsoft.com" target="_blank" rel="noopener noreferrer" class="tech-link">
+                    <div class="tech-item scroll-animate">
+                        <div class="tech-icon">
+                            <i class="fab fa-microsoft"></i>
+                        </div>
+                        <div class="tech-name">Microsoft</div>
+                    </div>
+                </a>
+                <a href="https://redis.io" target="_blank" rel="noopener noreferrer" class="tech-link">
+                    <div class="tech-item scroll-animate">
+                        <div class="tech-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="tech-name">Redis</div>
+                    </div>
+                </a>
+                <a href="https://www.terraform.io" target="_blank" rel="noopener noreferrer" class="tech-link">
+                    <div class="tech-item scroll-animate">
+                        <div class="tech-icon">
+                            <i class="fas fa-code-branch"></i>
+                        </div>
+                        <div class="tech-name">Terraform</div>
+                    </div>
+                </a>
+                <a href="https://nodejs.org" target="_blank" rel="noopener noreferrer" class="tech-link">
+                    <div class="tech-item scroll-animate">
+                        <div class="tech-icon">
+                            <i class="fab fa-node-js"></i>
+                        </div>
+                        <div class="tech-name">Node.js</div>
+                    </div>
+                </a>
+                <a href="https://dotnet.microsoft.com" target="_blank" rel="noopener noreferrer" class="tech-link">
+                    <div class="tech-item scroll-animate">
+                        <div class="tech-icon">
+                            <i class="fas fa-square"></i>
+                        </div>
+                        <div class="tech-name">.NET</div>
+                    </div>
+                </a>
+                <a href="https://kafka.apache.org" target="_blank" rel="noopener noreferrer" class="tech-link">
+                    <div class="tech-item scroll-animate">
+                        <div class="tech-icon">
+                            <i class="fas fa-stream"></i>
+                        </div>
+                        <div class="tech-name">Kafka</div>
+                    </div>
+                </a>
+                <a href="https://www.jenkins.io" target="_blank" rel="noopener noreferrer" class="tech-link">
+                    <div class="tech-item scroll-animate">
+                        <div class="tech-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <div class="tech-name">Jenkins</div>
+                    </div>
+                </a>
+                <a href="https://graphql.org" target="_blank" rel="noopener noreferrer" class="tech-link">
+                    <div class="tech-item scroll-animate">
+                        <div class="tech-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <div class="tech-name">GraphQL</div>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
@@ -954,7 +1087,7 @@
                         <div class="contact-icon">
                             <i class="fas fa-phone"></i>
                         </div>
-                        <div class="contact-text">+44 (0) 20 7946 0958</div>
+                        <div class="contact-text">+44 (0) 20 8150 7575</div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon">
@@ -982,6 +1115,12 @@
                     <p>
                         Leading provider of enterprise AI automation, cloud solutions, and digital transformation services. Transforming businesses through intelligent technology.
                     </p>
+                    <div class="company-details">
+                        <p><strong>ALSOURI LTD</strong></p>
+                        <p>Company Reg. No. 13119180</p>
+                        <p>Plot 5, 66 Islip Gardens</p>
+                        <p>UB5 5BY, England, United Kingdom</p>
+                    </div>
                 </div>
                 <div class="footer-section">
                     <h3>Services</h3>
@@ -998,6 +1137,7 @@
                     <ul>
                         <li><a href="#home">About Us</a></li>
                         <li><a href="#technology">Technology</a></li>
+                        <li><a href="company-info.html">Company Information</a></li>
                         <li><a href="#contact">Contact</a></li>
                         <li><a href="#">Careers</a></li>
                         <li><a href="#">Privacy Policy</a></li>
@@ -1022,7 +1162,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 AL-SOURI TECHNOLOGIES™. All rights reserved. | Designed with excellence in London, UK.</p>
+                <p>&copy; 2025 AL-SOURI TECHNOLOGIES™. All rights reserved. | Designed & Operated with excellence in London, UK by <a href="https://hoiltd.com" target="_blank" rel="noopener noreferrer" class="footer-link">Home & Office Improvements Ltd</a></p>
             </div>
         </div>
     </footer>
