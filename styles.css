@@ -759,21 +759,7 @@ body {
    ======================================== */
 @media (max-width: 768px) {
     .credibility-bar {
-        padding: 0.5rem 0;
-    }
-
-    .credibility-badges {
-        gap: 1rem;
-        font-size: 0.8rem;
-    }
-
-    .badge-item {
-        padding: 0.4rem 0.8rem;
-        font-size: 0.75rem;
-    }
-
-    .badge-item i {
-        font-size: 1rem;
+        display: none; /* Hide credibility bar on mobile - too cramped */
     }
 
     .nav-menu {
@@ -781,7 +767,7 @@ body {
     }
 
     .hero {
-        padding: 8rem 0 3rem; /* Adjusted for mobile */
+        padding: 8rem 0 3rem; /* Increased top padding to clear mobile header */
     }
 
     .hero-buttons {
