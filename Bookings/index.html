@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Strategy Session | AL-SOURI TECHNOLOGIES™</title>
+    <meta name="description" content="Schedule a strategic consultation with AL-SOURI TECHNOLOGIES™ to explore AI automation, cloud transformation, and enterprise innovation opportunities.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #0052CC;
+            --primary-dark: #003D99;
+            --primary-light: #E6F3FF;
+            --secondary: #00D4AA;
+            --secondary-dark: #00B894;
+            --accent: #FF6B35;
+            --text-dark: #1A1A1A;
+            --text-medium: #4A4A4A;
+            --text-light: #7A7A7A;
+            --bg-white: #FFFFFF;
+            --bg-light: #F8FAFC;
+            --border: #E2E8F0;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            --gradient-primary: linear-gradient(135deg, #0052CC 0%, #00D4AA 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: var(--bg-light);
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .header.scrolled {
+            box-shadow: var(--shadow);
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo i {
+            font-size: 1.8rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-medium);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        .nav-link.active {
+            color: var(--primary);
+        }
+
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--gradient-primary);
+            border-radius: 1px;
+        }
+
+        .cta-button {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-2px);
+        }
+
+        main {
+            padding: 7rem 0 5rem;
+        }
+
+        .section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: var(--primary-light);
+            color: var(--primary);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .hero-subtitle {
+            font-size: 1.125rem;
+            color: var(--text-medium);
+            margin-bottom: 2rem;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .btn-primary, .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.9rem 1.8rem;
+            border-radius: 45px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .booking-card {
+            background: var(--bg-white);
+            border-radius: 24px;
+            padding: 3rem;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border);
+            margin-bottom: 3rem;
+        }
+
+        .booking-card h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .booking-card p {
+            color: var(--text-medium);
+            margin-bottom: 1.5rem;
+        }
+
+        .booking-steps {
+            display: grid;
+            gap: 1.5rem;
+            margin: 2rem 0 3rem;
+        }
+
+        .step-item {
+            background: var(--bg-light);
+            border-radius: 18px;
+            padding: 1.75rem;
+            border: 1px solid rgba(0, 82, 204, 0.12);
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .step-icon {
+            width: 42px;
+            height: 42px;
+            background: var(--primary-light);
+            color: var(--primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+        }
+
+        .step-content h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.4rem;
+            color: var(--text-dark);
+        }
+
+        .step-content p {
+            color: var(--text-medium);
+            margin: 0;
+        }
+
+        .support {
+            text-align: center;
+            color: var(--text-medium);
+        }
+
+        .support a {
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        footer {
+            padding: 2rem 0;
+            text-align: center;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            main {
+                padding-top: 6rem;
+            }
+
+            .booking-card {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header" id="header">
+        <nav class="nav-container">
+            <a href="/" class="logo">
+                <i class="fas fa-atom"></i>
+                AL-SOURI TECHNOLOGIES™
+            </a>
+            <ul class="nav-menu">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/#services" class="nav-link">Services</a></li>
+                <li><a href="/#technology" class="nav-link">Technology</a></li>
+                <li><a href="/Bookings/" class="nav-link active">Bookings</a></li>
+                <li><a href="/#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <a href="/#contact" class="cta-button">Get Started</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section hero">
+            <span class="hero-badge">Priority Access</span>
+            <h1 class="hero-title">Book Your Strategy Session</h1>
+            <p class="hero-subtitle">
+                Secure a dedicated consultation with our leadership team to explore how AI automation, cloud architecture, and enterprise-grade systems can elevate your organisation.
+            </p>
+            <div class="hero-actions">
+                <a class="btn-primary" href="https://outlook.office.com/bookwithme/user/983ec821a151456eae3822ddb3717194@alsouri.org?anonymous&ismsaljsauthenabled&ep=plink" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-calendar-check"></i>
+                    Launch Booking Portal
+                </a>
+                <a class="btn-secondary" href="mailto:info@alsouri.org">
+                    <i class="fas fa-envelope"></i>
+                    Ask a Question
+                </a>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="booking-card">
+                <h2>What to Expect</h2>
+                <p>
+                    Our Microsoft 365 Booking experience allows you to choose a convenient slot, share key priorities, and connect directly with the ALSOURI engineering and strategy team. Sessions typically run for 45 minutes and can be held virtually or in-person (Arizona & UAE).
+                </p>
+
+                <div class="booking-steps">
+                    <div class="step-item">
+                        <div class="step-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="step-content">
+                            <h3>Choose Your Time</h3>
+                            <p>Select from available time zones and durations to align with your team&apos;s schedule.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon">
+                            <i class="fas fa-list-check"></i>
+                        </div>
+                        <div class="step-content">
+                            <h3>Share Objectives</h3>
+                            <p>Outline your automation, cloud, or transformation goals so we arrive prepared with high-impact options.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <div class="step-content">
+                            <h3>Engage with Experts</h3>
+                            <p>Connect with senior consultants who have delivered large-scale programmes across regulated industries.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a class="btn-primary" href="https://outlook.office.com/bookwithme/user/983ec821a151456eae3822ddb3717194@alsouri.org?anonymous&ismsaljsauthenabled&ep=plink" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-calendar-plus"></i>
+                    Book a Strategy Session Now
+                </a>
+            </div>
+        </section>
+
+        <section class="section support">
+            <p>
+                Need an NDA ahead of time or a private briefing for your leadership team? Email <a href="mailto:info@alsouri.org">info@alsouri.org</a> and we will coordinate a tailored engagement.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 AL-SOURI TECHNOLOGIES™. Elevating enterprises with AI-first automation and secure cloud platforms.</p>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 80) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
