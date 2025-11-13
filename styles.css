@@ -53,10 +53,10 @@ body {
     top: 80px; /* Below header */
     left: 0;
     right: 0;
-    background: linear-gradient(135deg, #0052CC 0%, #00D4AA 100%);
+    background: linear-gradient(135deg, #1a237e 0%, #0052CC 50%, #00D4AA 100%);
     z-index: 999;
     padding: 0.75rem 0;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .credibility-container {
@@ -97,6 +97,13 @@ body {
 
 .badge-item i {
     font-size: 1.2rem;
+}
+
+.partner-logo {
+    height: 20px;
+    width: auto;
+    object-fit: contain;
+    filter: brightness(0) invert(1); /* Make logos white for dark background */
 }
 
 .badge-stripe {
