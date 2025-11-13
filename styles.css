@@ -103,7 +103,7 @@ body {
     height: 20px;
     width: auto;
     object-fit: contain;
-    filter: brightness(0) invert(1); /* Make logos white for dark background */
+    /* Original colored logos look great on dark gradient */
 }
 
 .badge-stripe {
