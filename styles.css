@@ -69,8 +69,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
+    gap: 1rem;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 .badge-item {
@@ -78,13 +79,15 @@ body {
     align-items: center;
     gap: 0.5rem;
     color: white;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 500;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.875rem;
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
     transition: all 0.3s ease;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .badge-item:hover {
@@ -112,6 +115,7 @@ body {
     color: inherit;
     display: block;
     transition: all 0.3s ease;
+    flex-shrink: 0;
 }
 
 .badge-link:hover .badge-item {
