@@ -587,6 +587,43 @@ body {
     color: var(--primary);
 }
 
+/* Technology Brand Colors */
+.tech-icon .fa-aws {
+    color: #FF9900;
+}
+
+.tech-icon .fa-microsoft {
+    color: #0078D4;
+}
+
+.tech-icon .fa-google {
+    color: #4285F4;
+}
+
+.tech-icon .fa-python {
+    color: #3776AB;
+}
+
+.tech-icon .fa-js-square {
+    color: #F7DF1E;
+}
+
+.tech-icon .fa-react {
+    color: #61DAFB;
+}
+
+.tech-icon .fa-docker {
+    color: #2496ED;
+}
+
+.tech-icon .fa-node-js {
+    color: #339933;
+}
+
+.tech-icon .fa-git-alt {
+    color: #F05032;
+}
+
 .tech-name {
     font-weight: 600;
     color: var(--text-dark);
