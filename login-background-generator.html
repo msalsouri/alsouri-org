@@ -67,6 +67,25 @@
             max-width: 800px;
         }
 
+        .logo-circle {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 30px;
+            background: white;
+            border-radius: 50%;
+            padding: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
         .company-name {
             font-size: 72px;
             font-weight: 700;
@@ -193,6 +212,9 @@
 
         <!-- Main branding content -->
         <div class="branding-container">
+            <div class="logo-circle">
+                <img src="favicon-circular.png" alt="ALSOURI FinTech Logo">
+            </div>
             <h1 class="company-name">ALSOURI FinTech</h1>
             <p class="tagline">Enterprise Technology Solutions</p>
             
