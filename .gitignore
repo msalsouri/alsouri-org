@@ -35,3 +35,12 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Lenovo Partner Price Lists & Documents #
+###########################################
+*.xlsx
+*.xls
+*.csv
+*.pdf
+!favicon*.png
+!*logo*.png
