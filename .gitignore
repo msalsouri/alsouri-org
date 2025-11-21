@@ -44,3 +44,11 @@ Thumbs.db
 *.pdf
 !favicon*.png
 !*logo*.png
+
+# Partner Center Credentials #
+##############################
+.env
+*.pem
+*.pfx
+*.key
+partner-center/secrets/
