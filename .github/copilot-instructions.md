@@ -143,6 +143,27 @@ You are working on **alsouri-tech-site-uk**, a personal technology portfolio and
 </head>
 ```
 
+### Required Components for All Pages
+
+**CRITICAL: Microsoft Teams Chatbot Widget**
+
+Every HTML page MUST include the Microsoft Teams Customer Connect chatbot widget before the closing `</body>` tag:
+
+```html
+<!-- Teams Chatbot Widget -->
+<script type="text/javascript" src="https://res.public.onecdn.static.microsoft/customerconnect/v1/7dttl/init.js" id="chatbot" environmentId="401c3481-def7-eeed-9246-b19d2a137409" crossorigin="anonymous"></script>
+</body>
+</html>
+```
+
+**Implementation Rules:**
+- Always add chatbot widget to new HTML pages
+- Place immediately before closing `</body>` tag
+- Widget appears in bottom-right corner automatically
+- Environment ID: `401c3481-def7-eeed-9246-b19d2a137409`
+- DO NOT modify the script src or environment ID
+- Currently integrated on: index.html, alsouri-ltd.html, company-info.html, login-background-generator.html
+
 ### SEO Optimization
 
 - **Structured Data**: JSON-LD for rich snippets
