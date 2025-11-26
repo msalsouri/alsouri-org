@@ -433,6 +433,65 @@ body {
 }
 
 /* ========================================
+   WHY CHOOSE US SECTION
+   ======================================== */
+.why-us {
+    padding: 6rem 0;
+    background: var(--bg-white);
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.why-card {
+    background: var(--bg-light);
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 2px solid var(--border-light);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.why-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--primary);
+    background: var(--bg-white);
+}
+
+.why-number {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--primary-light);
+    line-height: 1;
+    margin-bottom: 1rem;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.why-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.why-description {
+    color: var(--text-medium);
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+/* ========================================
    SERVICES SECTION
    ======================================== */
 .services {
